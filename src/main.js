@@ -3,6 +3,8 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
+const account_id = '{{ACCOUNT_ID}}'
+
 new Vue({
   render: h => h(App),
-}).$mount("{{WIDGG_APP}}")
+}).$mount('[widgg-name="{{WIDGET_NAME}}"][widgg-account-id="' + account_id + '"]')
