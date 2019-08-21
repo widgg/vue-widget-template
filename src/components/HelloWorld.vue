@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <img class="vue-img" v-bind:src="require('../assets/logo.png')">
   </div>
 </template>
 
@@ -18,7 +19,9 @@ export default {
 .hello {
   width: 200px;
   height: 200px;
-  line-height: 200px;
   background-color: #80b3ff;
+}
+.vue-img {
+    height: 100px;
 }
 </style>
