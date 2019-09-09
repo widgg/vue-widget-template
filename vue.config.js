@@ -1,22 +1,22 @@
 // vue.config.js
 
-const webpack = require('webpack')
+const webpack = require('webpack');
 
 module.exports = {
   configureWebpack: {
     plugins: [
       new webpack.optimize.LimitChunkCountPlugin({
-      	maxChunks: 1
+		  maxChunks: 1
       })
 	]
   },
   chainWebpack:
   	config => {
-		const fontsRule = config.module.rule('images')
+		const fontsRule = config.module.rule('images');
 		// clear all existing loaders.
 		// if you don't do this, the loader below will be appended to
 		// existing loaders of the rule.
-		fontsRule.uses.clear()
+		fontsRule.uses.clear();
 	  
 		config.module
 		  .rule('images')
@@ -31,6 +31,6 @@ module.exports = {
   	},
   	filenameHashing: false,
   	css: {
-  		extract: false
+  		extract: true
   	}
-}
+};
